@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">EXPENSE TRACKER</h1>
+      <p class="instructions">
+        This expense tracker helps you track your expenses for as long as you
+        wish. Whenever you wish to start tracking afresh ( This can be after a
+        week or a month or any period of time ), click on the clear records
+        button to clear everything. Click on the 'Export as CSV button' to
+        export the records as a .csv file
+      </p>
+      <div class="expenses-div">
+        <div class="add-container">
+          <form class="add-form" action="/" autocomplete="off">
+            <label for="amount">Amount ( mention denomination )</label>
+            <input name="amount-input" class="amount-input" type="text" />
+            <label for="to">To</label>
+            <input class="to-input" type="text" />
+            <label for="note">Note</label>
+            <textarea name="note" id="note" class="note-input"></textarea>
+            <label for="date">Date</label>
+            <input class="date-input" type="date" />
+            <button class="add-btn" type="submit">Add expense</button>
+            <button class="clear-btn" type="submit">Clear Records</button>
+            <button class="export-btn">Export as CSV</button>
+          </form>
+        </div>
+        <div class="history-container">
+          <table class="history-table">
+            <thead id="headers">
+              <tr>
+                <th>Date</th>
+                <th>To</th>
+                <th>Note</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
